@@ -17,7 +17,7 @@ app.use('/admin-secret-key', require('./serwer/routes/admin'))
 app.use('/email', require('./serwer/routes/email'))
 app.use('/', require('./serwer/routes/index'))
 
-app.listen(3000, function() {
+app.listen(process.env.PORT || 3000, function() {
 
     console.log('Listening on PORT 3000')
 
